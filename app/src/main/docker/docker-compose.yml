@@ -1,0 +1,17 @@
+version: '2'
+services:
+  vici:
+    image: vici-eiffel
+    ports:
+      - 8080:8080
+    networks:
+      - vici-network
+  dummy-er:
+    image: dummy-er
+    ports:
+      - 8081:8081
+    networks:
+      - vici-network
+
+networks:
+  vici-network:

@@ -11,8 +11,6 @@ buildscript {
     }
 }
 
-group = "ewahjon"
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -24,7 +22,7 @@ docker {
 }
 
 task buildDocker(type: Docker, dependsOn: build) {
-    push = true
+    push = false
     applicationName = "dummy-er"
     dockerfile = file('src/main/docker/Dockerfile')
     doFirst {
@@ -39,7 +37,8 @@ jar {
     baseName = 'dummy-er'
 }
 
-version = '0.1'
+//version = '0.2'
+
 sourceCompatibility = 1.8
 
 repositories {
