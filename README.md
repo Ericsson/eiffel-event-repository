@@ -23,7 +23,7 @@ This repository contains a software implementation based on the Eiffel protocol.
 Eiffel Event Repository is licensed under the [Apache License 2.0](./LICENSE).
 
 ## How to Run
-For the dummy event repository to work, you have to extract app\src\main\resources\static\events.zip into app\src\main\resources\static\events.json
+For the dummy event repository to work, you have to extract app\src\main\resources\static\reference-data-set.zip into app\src\main\resources\static\reference-data-set.json
 
 To run the app you need Java 8 and Gradle installed.
 
@@ -38,7 +38,7 @@ Linux:
 ./gradlew build && java -jar .\build\libs\dummy-er.jar
 ~~~~
 
-The app should now be running at http://127.0.0.1:8081/ and the events should now be accessible through http://127.0.0.1:8081/events.json
+The app should now be running at http://127.0.0.1:8081/ and the events should now be accessible through http://127.0.0.1:8081/reference-data-set.json
 
 ## How to docker (run together with Vici)
 First make sure you have created the docker image for Vici https://github.com/Ericsson/eiffel-vici
@@ -46,7 +46,7 @@ First make sure you have created the docker image for Vici https://github.com/Er
 - Dockerfiles is found in the folder app\src\main\docker\
 - Docker image is created with a gradle docker plugin with settings  found in app/src/build.gradle (https://github.com/Transmode/gradle-docker)
 
-1: Make sure you have unzipped the events.json file, instructions found in the "How to Run" section.
+1: Make sure you have unzipped the reference-data-set.json file, instructions found in the "How to Run" section.
 
 2: Build docker image:\
 Go to the /app/ folder in the repo root and use the following command:
